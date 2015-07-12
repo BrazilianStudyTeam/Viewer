@@ -11,17 +11,9 @@ require 'screens/selector'
 require 'screens/settings'
 require 'screens/skills'
 
-place = 'Home'
+require "Viewer-class"
+require 'settings-db'
+require 'utils'
 
-Shoes.app {
-	background white
-	stack do
-	flow do 
-	@text = edit_line
-	@pull = button "Hey!"
-end
-	@note = para "Hello World!"
-end
-
-	@pull.click {@note.replace @text.text()}
-}
+load_settings #carrega as configurações para poder então iniciar o Viewer
+Viewer.new({width: 800, height: 100})
