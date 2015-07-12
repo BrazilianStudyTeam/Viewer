@@ -1,0 +1,3 @@
+# configurações
+class Settings
+end
