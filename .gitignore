@@ -1,4 +1,5 @@
-settings.txt
-files/User/*
-Agora/*
-Archives/*
+Data/User/*
+Data/Agora/*
+Data/Archives/*
+install.ok
+install

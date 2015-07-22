@@ -1,0 +1,30 @@
+# Lists
+
+#  Text Type    - Size /pixel
+#   banner      -  48 pixel
+#   title       -  34 pixel
+#   subtitle    -  26 pixel
+#   tagline     -  18 pixel
+#   caption     -  14 pixel
+#   para        -  12 pixel
+#   inscription -  10 pixel
+
+#  Color List
+#   black, red, white, green, blue
+
+#  Font List
+
+#  Emphasis List
+#   normal  - the font is upright.
+#   oblique - the font is slanted, but in a roman style.
+#   italic  - the font is slanted in an italic style. 
+
+#  Weight List
+#   However, you may also pass in the numerical weight directly.
+#    ultralight - the ultralight weight (= 200)
+#    light      - the light weight (= 300)
+#    normal     - the default weight (= 400)
+#    semibold   - a weight intermediate between normal and bold (= 600)
+#    bold       - the bold weight (= 700)
+#    ultrabold  - the ultrabold weight (= 800)
+#    heavy      - the heavy weight (= 900)

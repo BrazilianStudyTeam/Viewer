@@ -1,0 +1,10 @@
+# Menu_Bar Settings
+
+# Botões para o menu que estão instalados/registrados
+&buttons_available: ["exit", "settings", "reader", "help"]
+
+# Os botões que estiverem abaixo estarão automaticamente ativos.
+§settings: system
+§reader: system
+§help: system
+§exit: system

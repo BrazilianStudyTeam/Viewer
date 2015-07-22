@@ -1,0 +1,8 @@
+#General Settings
+width: 1000
+height: 600
+fullscreen: false
+title: BSTViewer
+debug: false
+theme: default
+shell: default

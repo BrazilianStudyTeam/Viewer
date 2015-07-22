@@ -1,0 +1,30 @@
+# Theme name: Default Theme
+# Author: João Pedro Dias Soares
+# Version: 0.1
+# 16/07/2015 BRT
+
+# See the help_theme.txt in System/Help_Files/ to more information.
+
+schedules:{"day": "06-18", "night": "18-06", "other": "none"}
+background:{"day": "white", "night": "black"}
+
+# 48 pixel
+banner:{"day":{"color": "black", "fill": "none", "font": "Trebuchet MS", "type": "banner", "emphasis": "normal", "weight": "normal"}, "night":{"color": "white", "fill": "none", "font": "Trebuchet MS", "type": "banner", "emphansis": "normal", "weight": "normal"}}
+
+# 34 pixel
+title:{"day":{"color": "black", "fill": "none", "font": "Trebuchet MS", "type": "title", "emphasis": "normal", "weight": "normal"}, "night":{"color": "white", "fill": "none", "font": "Trebuchet MS", "type": "title", "emphansis": "normal", "weight": "normal"}}
+
+# 26 pixel
+subtitle:{"day":{"color": "black", "fill": "none", "font": "Trebuchet MS", "type": "subtitle", "emphasis": "normal", "weight": "normal"}, "night":{"color": "white", "fill": "none", "font": "Trebuchet MS", "type": "subtitle", "emphansis": "normal", "weight": "normal"}}
+
+# 18 pixel
+tagline:{"day":{"color": "black", "fill": "none", "font": "Trebuchet MS", "type": "tagline", "emphasis": "normal", "weight": "normal"}, "night":{"color": "white", "fill": "none", "font": "Trebuchet MS", "type": "tagline", "emphansis": "normal", "weight": "normal"}}
+
+# 14 pixel
+caption:{"day":{"color": "black", "fill": "none", "font": "Trebuchet MS", "type": "caption", "emphasis": "normal", "weight": "normal"}, "night":{"color": "white", "fill": "none", "font": "Trebuchet MS", "type": "caption", "emphansis": "normal", "weight": "normal"}}
+
+# 12 pixel
+para:{"day":{"color": "black", "fill": "none", "font": "Trebuchet MS", "type": "para", "emphasis": "normal", "weight": "normal"}, "night":{"color": "white", "fill": "none", "font": "Trebuchet MS", "type": "para", "emphansis": "normal", "weight": "normal"}}
+
+# 10 pixel
+inscription:{"day":{"color": "black", "fill": "none", "font": "Trebuchet MS", "type": "inscription", "emphasis": "normal", "weight": "normal"}, "night":{"color": "white", "fill": "none", "font": "Trebuchet MS", "type": "inscription", "emphansis": "normal", "weight": "normal"}}

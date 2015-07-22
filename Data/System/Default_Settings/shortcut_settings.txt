@@ -1,0 +1,27 @@
+#Shortcut Settings
+
+%activate_disable_line_cursor:e
+%select_with_cursor:q
+%move_up:w
+%move_down:s
+%move_left:a
+%move_right:d
+%change_focus:TAB
+%pause_play_signal:p
+%exit:Esc
+%auto_scroll:l
+%help:h
+%activate_disable_comments:c
+%finish_action:Enter
+%change_theme:t
+%more_font:i
+%minus_font:u
+%activate_disable_fullscreen:f
+%hide_show_main_one:1
+%hide_show_main_two:2
+%hide_show_main_three:3
+%hide_show_main_four:4
+%hide_show_main_five:5
+%hide_show_information_bar:;
+%hide_show_menu_bar:\
+%call_close_prompt:'
