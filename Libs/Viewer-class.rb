@@ -9,20 +9,20 @@ class Viewer
 			@canvas1_4 = Main.new(self)
 			@canvas1_5 = Main.new(self)
 			@canvas2   = MenuBar.new(self)
-			@canvas3   = Informationbar.new(self)
+			@canvas3   = InformationBar.new(self)
 
 			@level1 = flow() do
-				@canvas1_1.do
-				@canvas1_2.do
-				@canvas1_3.do
-				@canvas1_4.do
-				@canvas1_5.do
+				@canvas1_1.does
+				@canvas1_2.does
+				@canvas1_3.does
+				@canvas1_4.does
+				@canvas1_5.does
 			end
 			@level2 = flow() do
-				@canvas2.do
+				@canvas2.does
 			end
 			@level3 = flow() do
-				@canvas3.do
+				@canvas3.does
 			end
 		end
 	end

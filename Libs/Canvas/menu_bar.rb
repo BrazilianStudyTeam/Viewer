@@ -4,9 +4,9 @@ end
 
 class << MenuBar
 	def valid_button? button_name
-		if File.exist(("Data/System/Apps/"+button_name.to_s+"/check.rb").correct_path)
+		if File.exist?(("Data/System/Apps/"+button_name.to_s+"/check.rb").correct_path)
 			path = ("Data/System/Apps/"+button_name.to_s+"/check.rb").correct_path
-		elsif File.exist(("Data/User/Apps/"+button_name.to_s+"/check.rb").correct_path)
+		elsif File.exist?(("Data/User/Apps/"+button_name.to_s+"/check.rb").correct_path)
 			path = ("Data/User/Apps/"+button_name.to_s+"/check.rb").correct_path
 		else
 			return false

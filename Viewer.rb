@@ -18,11 +18,12 @@ if (File.exist?("install.ok"))
 	# Os canvas são a parte básica, partes esquematicas da interface do usuário.
 	require_relative 'Libs/Canvas/basic'.correct_path
 	require_relative 'Libs/Canvas/main'.correct_path
-	require_relative 'Libs/Canvas/prompt'.correct_path
 	require_relative 'Libs/Canvas/information_bar'.correct_path
 	require_relative 'Libs/Canvas/menu_bar'.correct_path
+	require_relative 'Libs/Canvas/shell'.correct_path
 	
 	#As screens se carregam no canvas main.
+	require_relative 'Libs/Screens/apps'.correct_path
 	require_relative 'Libs/Screens/help'.correct_path
 	require_relative 'Libs/Screens/home'.correct_path
 	require_relative 'Libs/Screens/reader'.correct_path
@@ -30,12 +31,37 @@ if (File.exist?("install.ok"))
 	require_relative 'Libs/Screens/settings'.correct_path
 	require_relative 'Libs/Screens/skills'.correct_path
 	
-	require_relative 'Libs/System/Viewer-class'.correct_path
-	require_relative 'Libs/System/settings'.correct_path
-	require_relative 'Libs/System/theme'.correct_path
+	require_relative 'Libs/Viewer-class'.correct_path
+	require_relative 'Libs/settings'.correct_path
 else
 	puts "Please install me before you run me. :)", "Use the install file to do this.", "install if in Unix; install.bat if in Windows"
 end
 
 load_settings
+p $width      
+p $height     
+p $fullscreen 
+p $title      
+p $debug      
+p $theme      
+p $shell      
+ 
+p $level_1
+p $level_2
+p $level_3
+
+p $main_1
+p $main_2
+p $main_3
+p $main_4
+p $main_5
+ 
+p $tasks_available
+p $tasks_on
+ 
+p $buttons_available
+p $buttons_on
+ 
+p $shortcuts
+
 Viewer.new
