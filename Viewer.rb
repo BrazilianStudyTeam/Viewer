@@ -1,3 +1,4 @@
+#!/usr/local/bin/ruby
 # Bem vindo ao BST Viewer!
 # Com ele você poderá ler os arquivos da Team !
 # Cuide-se :)
