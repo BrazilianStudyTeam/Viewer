@@ -22,6 +22,4 @@
 %hide_show_main_three:3
 %hide_show_main_four:4
 %hide_show_main_five:5
-%hide_show_information_bar:;
-%hide_show_menu_bar:\
 %call_close_prompt:'

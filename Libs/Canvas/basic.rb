@@ -1,18 +1,5 @@
 class Basic
-	attr_accessor :width, :height, :showable
-	@a # @app
-	@do
-
-	def initialize app
-		@a = app
-		@do = Proc.new do
-			@a.background @a.black
-		end
-	end
-
-	def does
-		@do.call if @do.is_a? Proc
-	end
+	attr_accessor :width, :height, :does, :a
 end
 
 class << Basic

@@ -6,7 +6,7 @@
 # line=""           -> line=[["", ""], ""]
 # line=nil          -> line=[["", ""], ""]
 def parseSettings line
-	if line.is_a_non_empty_string? && (line=line.split(":", 2)).length == 2
+	if line.is_a_non_empty_string? && (line=line.split(':', 2)).length == 2
 		line[0] = line[0].partition(line[0][0])[1,2]
 		if (line[0][1]!="" && line[1]!="")
 			return line

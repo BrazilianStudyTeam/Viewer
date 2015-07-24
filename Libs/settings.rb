@@ -1,35 +1,5 @@
 # nos app por um need_reinstall rebuild...
 
-# General Settings
-	$width      = 0
-	$height     = 0
-	$fullscreen = nil
-	$title      = nil
-	$debug      = nil
-	$theme      = nil
-	$shell      = nil
-
-# Gui (all gui) Settings
-	# Levels height
-		$level_1 = 0
-		$level_2 = 0
-		$level_3 = 0
-	# Mains settings
-		$main_1 = {}
-		$main_2 = {}
-		$main_3 = {}
-		$main_4 = {}
-		$main_5 = {}
-	# Tasks
-		$tasks_available = []
-		$tasks_on        = {}
-	# Menu_bar
-		$buttons_available = {}
-		$buttons_on        = {}
-
-# ShortCut Settings
-	$shortcuts = {}
-
 # SET   -> Se o argumento for:
 			# => true
 				# => volta para as configurações default.
@@ -171,10 +141,7 @@ def check_gui_settings
 		temp_mains_settings = {}
 		temp_tasks_settings = []
 		re = {}
-		sum_vertical = 0
-		sum_horizontal = 0
-		view_type = "" # se está carregando um main vertical ou horizontal
-		number_horizontal = 0
+		view_type = ""
 		IO.foreach(path) do |line|
 			line = parseSettings(line.chomp.strip)
 			case line[0][0]
@@ -193,41 +160,21 @@ def check_gui_settings
 					 						when "activated", "showable"
 					 							valid_line[k].is_boolean?
 					 						when "screen"
-					 							["help", "home", "reader", "settings", "skills", "selector"].include?(valid_line[k])
+					 							["apps", "help", "home", "reader", "selector", "settings", "skills"].include?(valid_line[k])
 					 						when "mode"
 					 							case tmp=(valid_line[k]=valid_line[k].split("_", 2))[0]
 					 								when "vertical"
 					 									view_type = "vertical"
 					 									true
-					 								when "horizontal"
-					 									if (valid_line[k][1].to_i > number_horizontal) && (valid_line[k][1].to_i > 0)
-					 										number_horizontal=valid_line[k][1].to_i
-					 										view_type = "horizontal"
-					 										true
-					 									else
-					 										true
-					 									end
 					 								else
 					 									return false
 					 							end
 					 						when "size"
 					 							case view_type
 						 							when "vertical"
-						 								#sum_vertical+=valid_line[k].to_i if (valid_line[k].is_a? Fixnum) && (valid_line[k]>0)
 						 								true
-						 							when "horizontal"
-						 								if (valid_line[k][1] > 0)
-						 									sum_horizontal+=valid_line[k][1].to_i
-						 									number_horizontal-=1
-
-						 									if ((number_horizontal==0) && (sum_horizontal != 100))
-						 										return false
-						 									else
-						 										true
-						 									end
-						 								else
-						 									true
-						 								end
+						 							else
+						 								return false
 					 							end
 					 					  end))}
 								return valid_line
@@ -278,24 +225,24 @@ def load_gui_settings
 				when "@"
 					case line[0][1]
 						when "level_1"
-							$level_1 = line[1].to_i
+							$level_1_h = line[1].to_i
 						when "level_2"
-							$level_2 = line[1].to_i
+							$level_2_h = line[1].to_i
 						when "level_3"
-							$level_3 = line[1].to_i
+							$level_3_h = line[1].to_i
 					end
 				when "$"
 					case line[0][1]
-						when "main_1"
-							$main_1 = JSON.parse(line[1])
+						when "main_1"                     # \/ this convert the string keys to symbol keys
+							$main_1 = JSON.parse(line[1]).inject({}){|memo,(k,v)| memo[k.to_sym] = v; memo}
 						when "main_2"
-							$main_2 = JSON.parse(line[1])
+							$main_2 = JSON.parse(line[1]).inject({}){|memo,(k,v)| memo[k.to_sym] = v; memo}
 						when "main_3"
-							$main_3 = JSON.parse(line[1])
+							$main_3 = JSON.parse(line[1]).inject({}){|memo,(k,v)| memo[k.to_sym] = v; memo}
 						when "main_4"
-							$main_4 = JSON.parse(line[1])
+							$main_4 = JSON.parse(line[1]).inject({}){|memo,(k,v)| memo[k.to_sym] = v; memo}
 						when "main_5"
-							$main_5 = JSON.parse(line[1])
+							$main_5 = JSON.parse(line[1]).inject({}){|memo,(k,v)| memo[k.to_sym] = v; memo}
 					end
 				when "&"
 					case line[0][1]

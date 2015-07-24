@@ -1,30 +1,26 @@
 class Viewer
 	def initialize
-		Shoes.app(height: $height, width: $width, title: $title, fullscreen: $fullscreen, resizable: $resizable) do
-			background white
-			
-			@canvas1_1 = Main.new(self)
-			@canvas1_2 = Main.new(self)
-			@canvas1_3 = Main.new(self)
-			@canvas1_4 = Main.new(self)
-			@canvas1_5 = Main.new(self)
-			@canvas2   = MenuBar.new(self)
-			@canvas3   = InformationBar.new(self)
+		Shoes.app(height: $height, width: $width, title: $title, fullscreen: $fullscreen, resizable: false) do
+			@canvas1_settings = []
+			@canvas1_object = []
+			@canvas1_settings << $main_1 if $main_1[:activated]==true
+			@canvas1_settings << $main_2 if $main_2[:activated]==true
+			@canvas1_settings << $main_3 if $main_3[:activated]==true
+			@canvas1_settings << $main_4 if $main_4[:activated]==true
+			@canvas1_settings << $main_5 if $main_5[:activated]==true
 
-			@level1 = flow() do
-				@canvas1_1.does
-				@canvas1_2.does
-				@canvas1_3.does
-				@canvas1_4.does
-				@canvas1_5.does
-			end
-			@level2 = flow() do
-				@canvas2.does
-			end
-			@level3 = flow() do
-				@canvas3.does
-			end
-		end
+			@canvas1_settings.each do |x| @canvas1_object << Main.new(self, x); end
+			@canvas2 = MenuBar.new(self)
+			@canvas3 = InformationBar.new(self)
+
+			$level_1 = flow height: ($level_1_h*height*0.01).to_i, width: width do end
+			$level_2 = flow height: ($level_2_h*height*0.01).to_i, width: width do end
+			$level_3 = flow height: ($level_3_h*height*0.01).to_i, width: width do end
+
+			$level_1.append do @canvas1_object.each do |x| x.does.call if x.mode=="vertical"; end; end
+			$level_2.append do @canvas2.does.call; end
+  			$level_3.append do @canvas3.does.call; end
+
+  		end
 	end
-
 end

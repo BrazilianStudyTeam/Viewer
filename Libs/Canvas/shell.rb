@@ -1,5 +1,7 @@
 class Shell < Basic
-
+	@does = lambda {
+			@a.background @a.blue
+		}
 end
 
 class << Shell

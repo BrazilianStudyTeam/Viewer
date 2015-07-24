@@ -1,5 +1,16 @@
 class InformationBar < Basic
 	@tasks = false
+	def initialize a
+		@a = a
+		@does = Proc.new do 
+			@a.background @a.black
+			@a.button "information" do
+				$level_3.append do 
+					@a.background @a.rgb(rand(255),rand(255),rand(255))
+				end
+			end
+		end
+	end
 end
 
 class << InformationBar

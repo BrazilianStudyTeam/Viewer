@@ -1,7 +1,6 @@
 #GUI Settings
 
 #levels config
-# caso queira mudar o activated, só reiniciando/nova janela
 @level_1: 88
 @level_2: 7
 @level_3: 5
@@ -11,16 +10,11 @@
 #  vertical-> ocupa toda a vertical e seu size é sua largura,
 #  horizontal_n -> divide a altura com n mains, seu size é a largura
 #               -> só pode ter um horizontal
-$main_1: {"activated": true,   "showable": true,   "screen": "home",  "mode": "vertical",      "size": 75}
-$main_2: {"activated": true,   "showable": true,   "screen": "home",  "mode": "vertical",      "size": 25}
-$main_3: {"activated": false,  "showable": false,  "screen": "home",  "mode": "horizontal_2",  "size": 0}
-$main_4: {"activated": false,  "showable": false,  "screen": "home",  "mode": "horizontal_1",  "size": 0}
-$main_5: {"activated": false,  "showable": false,  "screen": "home",  "mode": "vertical",      "size": 0}
+#               -> telas horizontais ainda não foram implementadas!
+$main_1: {"activated": true,   "showable": true,   "screen": "home",  "mode": "vertical",  "size": 75}
+$main_2: {"activated": true,   "showable": true,   "screen": "home",  "mode": "vertical",  "size": 25}
+$main_3: {"activated": false,  "showable": false,  "screen": "home",  "mode": "vertical",  "size": 0}
+$main_4: {"activated": false,  "showable": false,  "screen": "home",  "mode": "vertical",  "size": 0}
+$main_5: {"activated": false,  "showable": false,  "screen": "home",  "mode": "vertical",  "size": 0}
 
 &tasks_available:["system_messages", "app_dock", "clock", "time"]
-
-# Configurações do prompt, menu_bar e information_bar
-# O activated, width e height deles dependem do de seu level correspondente. Dado que os levels 1, 3 e 4 só suportam um canvas. ^^
-# Lembrando que seus width são sempre 100% pois o width de cada level é 100%
-# Por questões de organizações não iremos criar apenas uma var para configurar o level e seu canvas.
-# os botões da menu_bar ocupam o mesmo tamanho, sendo divididos

@@ -4,6 +4,37 @@
 
 # PS: As hashes usarão sempre símbolos !
 
+# Settings from files - configurações obtidas por meio dos arquivos de configuração
+	# General Settings
+		$width      = 0
+		$height     = 0
+		$fullscreen = nil
+		$title      = nil
+		$debug      = nil
+		$theme      = nil
+		$shell      = nil
+	
+	# Gui (all gui) Settings
+		# Levels height
+			$level_1_h = 0
+			$level_2_h = 0
+			$level_3_h = 0
+		# Mains settings
+			$main_1 = {}
+			$main_2 = {}
+			$main_3 = {}
+			$main_4 = {}
+			$main_5 = {}
+		# Tasks
+			$tasks_available = []
+			$tasks_on        = {}
+		# Menu_bar
+			$buttons_available = {}
+			$buttons_on        = {}
+	
+	# ShortCut Settings
+		$shortcuts = {}
+
 require 'green_shoes' # Interface gráfica utilizada
 require 'json' # Para usar o JSON.Parse e a sua exception JSON:ParserError
 
@@ -23,6 +54,7 @@ if (File.exist?("install.ok"))
 	require_relative 'Libs/Canvas/shell'.correct_path
 	
 	#As screens se carregam no canvas main.
+	# Já vamos dá require nelas de uma vez para não ficar dando load somente quando for usar... perdendo tempo.
 	require_relative 'Libs/Screens/apps'.correct_path
 	require_relative 'Libs/Screens/help'.correct_path
 	require_relative 'Libs/Screens/home'.correct_path
@@ -38,30 +70,4 @@ else
 end
 
 load_settings
-p $width      
-p $height     
-p $fullscreen 
-p $title      
-p $debug      
-p $theme      
-p $shell      
- 
-p $level_1
-p $level_2
-p $level_3
-
-p $main_1
-p $main_2
-p $main_3
-p $main_4
-p $main_5
- 
-p $tasks_available
-p $tasks_on
- 
-p $buttons_available
-p $buttons_on
- 
-p $shortcuts
-
 Viewer.new

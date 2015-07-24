@@ -1,5 +1,16 @@
 class MenuBar < Basic
 	attr_accessor :icons, :buttons
+	def initialize a
+		@a = a
+		@does = Proc.new do
+			@a.background @a.red
+			@a.button "menu" do
+				$level_2.append do 
+					@a.background @a.rgb(rand(255),rand(255),rand(255))
+				end
+			end
+		end
+	end
 end
 
 class << MenuBar
