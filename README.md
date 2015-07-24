@@ -7,6 +7,7 @@ Apenas para sistemas linux: https://mega.nz/#!o4dVWaiA!heLcRKCTcQFcXPTO8gh2Iz834
 <br/>
 Instalação manual: <br/>
 Instale o Ruby: https://www.ruby-lang.org/pt/downloads/ <br/>
+Caso use Windows, use este site: http://rubyinstaller.org/downloads/ <br/>
 Instale o git: http://git-scm.com/download <br/>
 Instale a gem grit: gem install grit <br/>
 Instale a gem green_shoes: gem install green_shoes <br/>
