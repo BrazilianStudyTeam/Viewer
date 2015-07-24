@@ -2,7 +2,7 @@
 width: 1000
 height: 600
 fullscreen: false
-title: BSTViewer
+title: ProjetoAstra
 debug: false
 theme: default
 shell: default
